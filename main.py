@@ -1,16 +1,24 @@
-# This is a sample Python script.
 
-# Press ⌃R to execute it or replace it with your code.
-# Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
+def is_leap(year):
+    leap = False
 
+    if year % 4 == 0:
+        if year % 100 == 0:
+            if year % 400 == 0:
+                leap = True
+            else:
+                leap = False
+        else:
+            leap = True
+    else:
+        leap = False
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press ⌘F8 to toggle the breakpoint.
-
+    return leap
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    print_hi('PyCharm')
+    #run tests
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+
+    year = int(input())
+    print(is_leap(year))
