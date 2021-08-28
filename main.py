@@ -15,10 +15,15 @@ def is_leap(year):
 
     return leap
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    #run tests
 
+def run_tests():
+    test_values = [1996, 2000, 2004]
+    # these should return no error msg
+    for _ in test_values:
+        assert is_leap(_) == True, 'should be True'
+
+if __name__ == '__main__':
+    run_tests()
 
     year = int(input())
     print(is_leap(year))
